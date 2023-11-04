@@ -1,0 +1,20 @@
+-- LIBRARY
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
+
+ENTITY Mult2x1 IS
+	PORT(
+	   A, B, S : IN std_logic;
+		Sa : OUT std_logic
+	);
+END Mult2x1;
+
+ARCHITECTURE logic OF Mult2x1 IS
+BEGIN
+	PROCESS(A,B,S) IS
+		BEGIN
+			IF S = '0' THEN Sa <= A;
+			ELSE Sa <= B;
+		END IF;
+	END PROCESS;
+END logic;
